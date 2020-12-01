@@ -1,2 +1,2 @@
 # Golang-Learning
-My notes while learning Golang
+What I've written while learning Golang
