@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 import "../3-types/zeros"
+import "../3-types/custom-types"
 
 // Go is statically typed, a typed variable must remain that type
 // Here, we explicitly configure var y with a type of "int": var y int = 42
@@ -24,4 +25,5 @@ func main() {
 	s := fmt.Sprintf("Ohallo, we have y with a type of %T and value of %d\n", y, y)
 	fmt.Print("Output of sprintf: ")
 	fmt.Println(s)
+	custom_types.Custom()
 }
