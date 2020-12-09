@@ -24,6 +24,12 @@ func main() {
 	// }
 	// alternatively... use init;condition format
 	if v, ok := m["james"]; ok {
-		fmt.Println("James has a value of", v)
+		fmt.Println("James has a value of", v, "--> We are now deleting James")
+		// entry deletion: takes <map obj> key
+		delete(m, "james")
+	}
+	fmt.Println("Post-delete of James")
+	for k, v := range m {
+		fmt.Println(k, v)
 	}
 }
