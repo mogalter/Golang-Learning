@@ -23,6 +23,25 @@ func deferTheDefer(switches int) bool {
 	return false
 }
 
+func anonPowers(sample []int) {
+	// this is an anonymous function
+	// it executes and we don't remember it anymore.
+	func() {
+		fmt.Println("I am anonymous! Foo-Foo-Foo")
+	}()
+}
+
+func funcExpressions() func(int) int {
+	// this function returns a function
+	// this is similar to python's decorator.
+	// a func expression is when we assign a func to a variable!
+	var powersFunc func(int) int
+	powersFunc = func(x int) int {
+		return x * 2
+	}
+	return powersFunc
+}
+
 func main() {
 	// func (r receiver) identifier(parameter(s)) (return(s)) { code }
 	// receiver refers to what should receive the function (who the func belongs to)
@@ -33,4 +52,7 @@ func main() {
 	variadicType(sample...)
 	deferTheDefer(1)
 	deferTheDefer(7)
+	anonPowers(sample)
+	retFunc := funcExpressions()
+	fmt.Println(retFunc(7))
 }
