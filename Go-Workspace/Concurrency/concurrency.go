@@ -37,6 +37,7 @@ func main() {
 	fmt.Println("Number of routines in Use:", runtime.NumGoroutine())
 	fmt.Println("OS:", runtime.GOOS)
 	fmt.Println("Architecture:", runtime.GOARCH)
+	// holds up the code here until wait hits 0
 	waiter.Wait()
 	// concurrency vs parallelism?
 	// concurrency - a design pattern where code can potentially run in parallel
